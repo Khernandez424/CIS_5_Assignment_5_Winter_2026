@@ -32,15 +32,11 @@ int main() {
 	* Add the students here!
 	*/
 	//----------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
+    students[0] = {101, "Bill Jones", 87.3};
+    students[1] = {107, "Thomas ", 96.7};
+    students[2] = {110, "Sarah Palmer", 89.4};
+    students[3] = {109, "Karol Mendez", 84.8};
+    students[4] = {105, "Ethan Johnson", 95.8};
 	//----------------------------------------------------------------------------------------
 
 	// Complete the menu with the associated function
