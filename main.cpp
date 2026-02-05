@@ -37,6 +37,7 @@ int main() {
     students[2] = {110, "Sarah Palmer", 89.4};
     students[3] = {109, "Karol Mendez", 84.8};
     students[4] = {105, "Ethan Johnson", 95.8};
+	 count = 5; 
 	//----------------------------------------------------------------------------------------
 
 	// Complete the menu with the associated function
@@ -91,7 +92,11 @@ void printMenu() {
 
 void highestGrade(Student students[], int count)
 {
-	// TODO: Print out all the highest grade in the array
+	if (count == 0) { cout << "No students in the record.\n"; return; }
+    int high = 0;
+    for (int i = 1; i < count; i++) {
+        if (students[i].studentGrades > students[high].studentGrades) {
+            high = i;
 
 	// Here is a simple check to ensure your code does not break
 	if (count == 0) {
@@ -101,18 +106,27 @@ void highestGrade(Student students[], int count)
 }
 void lowestGrade(Student students[], int count)
 {
-	// TODO: Print out all the lowest grade in the array
+	if (count == 0) return;
+    int low = 0;
+    for (int i = 1; i < count; i++) {
+        if (students[i].studentGrades < students[low].studentGrades) {
+            low = i;
 }
 
 void averageGrade(Student students[], int count)
 {
-	// TODO: Print out the average grade of the students
+	if (count == 0) return;
+    float sum = 0;
+    for (int i = 0; i < count; i++) { sum += students[i].studentGrades; }
+    cout << "Class Average: " << (sum / count) << endl;
 }
 void printStudentId(Student students[], int count)
 {
-	// TODO: Print out all the students id in the array
+	for (int i = 0; i < count; i++) {
+        cout << "ID: " << students[i].studentId << endl;
 }
 void printStudentName(Student students[], int count)
 {
-	// TODO: Print out all the students name in the array
-}
+	for (int i = 0; i < count; i++) {
+        cout << "Name: " << students[i].studentName << endl;
+}	
